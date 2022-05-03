@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url('../fonts/Norse-Bold.otf') format('opentype')
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+$mainColor: #fff;
+$secondaryColor: #f9fafb;
+
+//Text
+$mainTextColor: #020202;
+
+  //form
+    $headColor: #1f2937;
+    $labelColor: #38414e;
+    $validColor: #4a6fd6;
+    $errorColor: #cb5858;
+
+$bgbtn-linksColor: #596D48;
+
+// function for rem
+@function rem($px) {
+    @return #{($px / 16) + 'rem'};
+}
+
+
+// Font Sizes
+    $font-sm: rem(14);
+    $font-med: rem(18);
+    $font-lg: rem(20);
+    $font-xl: rem(52);
+
+// Font Family
+    $logoFamily: 'Norse-Bold';
+    $primaryFamily: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+// Breakpoints
+    $breakpoints-up: ('medium': '40em', 'large': '64em', 'xlarge': '87.5em');
+    $breakpoints-down: ('small': '39.9375em', 'medium': '63.937em', 'large': '87.4375em');
+    
+    @mixin breakpoint-up($size) {
+        @media (min-width: map-get($breakpoints-up, $size)) {
+            @content
+        }
+    };
+    @mixin breakpoint-down($size) {
+        @media (max-width: mapget($breakpoints-down, $size)) {
+            @content
+        }
+    }
