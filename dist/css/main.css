@@ -6,6 +6,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  min-width: 26.375rem;
 }
 
 *, *::before, *::after {
@@ -21,6 +22,8 @@ body {
   color: #020202;
   font-weight: 300;
   min-height: 100vh;
+  background-color: #6b625d;
+  overflow-x: hidden;
 }
 
 p {
@@ -33,7 +36,7 @@ a, a:visited, a:hover {
 }
 
 a:not(.button) {
-  color: #596D48;
+  color: #dedcef;
 }
 
 .flex {
@@ -53,11 +56,11 @@ button, .button {
   position: relative;
   display: inline-block;
   padding: 0.9375rem 3.25rem;
-  background-color: #596D48;
+  background-color: #dedcef;
   border: 0;
   border-radius: 6px;
   cursor: pointer;
-  color: #fff;
+  color: #6b625d;
   font-size: 1rem;
   transition: opacity 300ms ease-in-out;
   box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.15);
@@ -85,6 +88,200 @@ h1, h2, h3 {
   color: #020202;
 }
 
+h2 {
+  font-size: 1.375rem;
+  margin-bottom: 2.25rem;
+}
+
 .italic {
   font-style: italic;
+}
+
+.container {
+  max-width: 29.375rem;
+  margin: 0 auto;
+}
+.container--py {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+@media (min-width: 64em) {
+  .container--py {
+    padding-top: 10.8125rem;
+    padding-bottom: 10.8125rem;
+  }
+}
+.container--pl {
+  padding-left: 2.6875rem;
+}
+
+.background-part {
+  position: relative;
+  width: 100%;
+}
+.background-part__background {
+  padding: max(50vh, 20rem) clamp(15rem, 50vw, 26rem);
+  padding-top: 0;
+  background-image: url("../images/pexels-justin-hamilton-205416.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center 100%;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  max-width: 81vw;
+}
+@media (min-width: 64em) {
+  .background-part__background {
+    padding: max(50vh, 20rem) clamp(2rem, 18vw, 26rem);
+    padding-top: 0;
+    background-image: url("../images/pexels-justin-hamilton-205416.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 83% 81%;
+    height: 100%;
+    margin-bottom: 1.25rem;
+  }
+}
+.background-part__logo {
+  position: absolute;
+  left: 9.625rem;
+  top: 9.125rem;
+}
+@media (min-width: 64em) {
+  .background-part__logo {
+    position: absolute;
+    left: 5.625rem;
+    top: 35.125rem;
+  }
+}
+.background-part__logo--image {
+  width: 3.3125rem;
+  height: 4.25rem;
+}
+.background-part__logo--text {
+  display: inline-block;
+  margin-left: -0.1875rem;
+  font-family: "Norse-Bold", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  font-size: clamp(1rem, 23vw, 5rem);
+}
+
+@media (min-width: 64em) {
+  .form-part {
+    width: 100vw;
+  }
+}
+@media (min-width: 64em) and (max-width: 63.937em) {
+  .form-part__header {
+    max-width: 20.5625rem;
+  }
+}
+@media (min-width: 64em) and (min-width: 64em) {
+  .form-part__header {
+    max-width: 33.625rem;
+  }
+}
+
+form h1 {
+  padding: 1.0625rem;
+}
+@media (min-width: 64em) {
+  form h1 {
+    padding-left: 9.8125rem;
+  }
+}
+form .input__fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1.875rem;
+  padding-right: 1.8125rem;
+  margin-bottom: 2.0625rem;
+  padding-bottom: 2.3125rem;
+}
+@media (max-width: 63.937em) {
+  form .input__fields {
+    row-gap: 1rem;
+  }
+}
+@media (min-width: 64em) {
+  form .input__fields {
+    grid-template-columns: 1fr 1fr;
+    max-width: 6.25rem;
+    -moz-column-gap: 1.5625rem;
+         column-gap: 1.5625rem;
+    row-gap: 0.9375rem;
+  }
+}
+form .input__fields label {
+  font-size: 0.6875rem;
+  align-self: end;
+  margin-left: calc(5rem + 2vw);
+  font-weight: 500;
+}
+@media (max-width: 63.937em) {
+  form .input__fields label {
+    max-width: 8.4375rem;
+  }
+}
+@media (min-width: 64em) {
+  form .input__fields label {
+    margin-right: -4.6875rem;
+  }
+}
+form .input__fields input {
+  max-width: 19.625rem;
+  margin: 0 auto;
+  width: 21.4375rem;
+  border: none;
+  border-radius: 5px;
+}
+@media (max-width: 63.937em) {
+  form .input__fields input {
+    max-width: 13.8125rem;
+  }
+}
+form .button {
+  left: 57%;
+  transform: translateX(-50%);
+  margin-bottom: 2.375rem;
+}
+@media (min-width: 64em) {
+  form .button {
+    left: 33%;
+  }
+}
+form .content {
+  background-color: #937c52;
+  width: 30.0625rem;
+}
+@media (max-width: 63.937em) {
+  form .content {
+    max-width: 100%;
+  }
+}
+@media (min-width: 64em) {
+  form .content {
+    background-color: #937c52;
+    width: 44.0625rem;
+    margin-right: auto;
+    width: 100vw;
+  }
+}
+
+.login {
+  margin: 0 auto;
+  max-width: 16.3125rem;
+}
+@media (min-width: 64em) {
+  .login {
+    max-width: 46.3125rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
 }/*# sourceMappingURL=main.css.map */

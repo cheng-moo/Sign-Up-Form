@@ -1,2 +1,12 @@
 @use './config' as *;
 @use './globals' as *;
+@use './hero' as *;
+@use './form' as *;
+
+.wrapper {
+    @include breakpoint-up(large) {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+    }
+    
+}

@@ -4,19 +4,21 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
-$mainColor: #fff;
+$mainColor: #6b625d;
 $secondaryColor: #f9fafb;
 
 //Text
 $mainTextColor: #020202;
 
   //form
+    $formColor: #937c52;
     $headColor: #1f2937;
     $labelColor: #38414e;
     $validColor: #4a6fd6;
     $errorColor: #cb5858;
 
-$bgbtn-linksColor: #596D48;
+$bgbtn-linksColor: #dedcef
+;
 
 // function for rem
 @function rem($px) {
@@ -43,7 +45,7 @@ $bgbtn-linksColor: #596D48;
         }
     };
     @mixin breakpoint-down($size) {
-        @media (max-width: mapget($breakpoints-down, $size)) {
+        @media (max-width: map-get($breakpoints-down, $size)) {
             @content
         }
     }
