@@ -29,6 +29,11 @@ p {
 
 a, a:visited, a:hover {
   text-decoration: none;
+  font-weight: 500;
+}
+
+a:not(.button) {
+  color: #596D48;
 }
 
 .flex {
@@ -47,15 +52,15 @@ a, a:visited, a:hover {
 button, .button {
   position: relative;
   display: inline-block;
-  padding: 1.0625rem 3.25rem;
+  padding: 0.9375rem 3.25rem;
   background-color: #596D48;
   border: 0;
-  border-radius: 50px;
+  border-radius: 6px;
   cursor: pointer;
   color: #fff;
-  font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 1rem;
   transition: opacity 300ms ease-in-out;
+  box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.15);
 }
 button::before, .button::before {
   content: "";
@@ -70,4 +75,16 @@ button::before, .button::before {
 }
 button:hover::before, .button:hover::before {
   opacity: 1;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.15;
+  color: #020202;
+}
+
+.italic {
+  font-style: italic;
 }/*# sourceMappingURL=main.css.map */
