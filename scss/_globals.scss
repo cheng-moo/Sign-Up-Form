@@ -124,3 +124,22 @@ input {
     appearance: none;
     
 }
+.guides {
+    padding: rem(10);
+    color: #4848d9c2;
+}
+.pass-guide {
+    position: absolute;
+    top: rem(278);
+    right: clamp(0rem, 1vw, 2rem);
+    font-size: rem(9);
+    @include breakpoint-up(large) {
+        top: rem(131);
+        right: rem(35);
+        font-size: rem(13);
+    }
+
+}
+.hide {
+    display: none;
+}

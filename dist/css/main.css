@@ -119,6 +119,29 @@ input {
        appearance: none;
 }
 
+.guides {
+  padding: 0.625rem;
+  color: rgba(72, 72, 217, 0.7607843137);
+}
+
+.pass-guide {
+  position: absolute;
+  top: 17.375rem;
+  right: clamp(0rem, 1vw, 2rem);
+  font-size: 0.5625rem;
+}
+@media (min-width: 64em) {
+  .pass-guide {
+    top: 8.1875rem;
+    right: 2.1875rem;
+    font-size: 0.8125rem;
+  }
+}
+
+.hide {
+  display: none;
+}
+
 .background-part {
   position: relative;
   height: 50vh;
@@ -187,6 +210,9 @@ input {
   }
 }
 
+form {
+  position: relative;
+}
 @media (min-width: 64em) {
   form {
     width: 100%;

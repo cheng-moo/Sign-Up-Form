@@ -21,31 +21,40 @@
                 <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span class="italic">now</span> to get started.</h2>
                 <h2>You <span class="italic">know</span> you want to.</h2>
             </div>
-            <form action="/" method="POST">
+            <form action="/" method="post" novalidate>
               <div class="content">
                 <h1>Let's do this!</h1>
                 <div class="input__fields">
                     <label for="first_name">FIRST NAME
-                    <input type="text" id="first_name" name="first_name">
+                    <input type="text" id="first_name" name="first_name" required>
                     </label>
                     <label for="last_name">LAST NAME
-                    <input type="text" id="last_name" name="last_name">
+                    <input type="text" id="last_name" name="last_name" required>
                     </label>
                     <label for="email">EMAIL
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required>
                     </label>
                     <label for="phone_number">PHONE NUMBER
-                    <input type="tel" id="phone_number" name="phone_number">
+                    <input type="tel" id="phone_number" name="phone_number" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$">
+                    <span class="num-guide guides"></span>
                     </label>
+
                     <label for="password">PASSWORD
-                    <input type="password" id="password" name="password" class="error">
+                    <input type="password" id="password" name="password" class="error" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
                     </label>
                     <label for="con-password">CONFIRM PASSWORD
-                    <input type="password" id="con-password" name="con-password" class="error">
+                    <input type="password" id="con-password" name="con-password" class="error" required>
+                    <span class="check-match guides"></span>
                     </label>
                 </div>
             </div>
-              <a href="#" class="button">Create Account</a>
+            <div class="pass-guide hide">
+              <div>Minimum eight characters.</div>
+              <div>at least one uppercase letter</div>
+              <div>at least one lowercase letter</div>
+              <div>at least one number</div>
+            </div>
+              <button type="submit" class="button">Create Account</button>
             </form>
             <div class="login">Already have an account? <a href="#">Log in</a></div>
         </div>
