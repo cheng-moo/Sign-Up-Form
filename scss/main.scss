@@ -4,9 +4,13 @@
 @use './form' as *;
 
 .wrapper {
+    @include breakpoint-down(medium) {
+    height: 100vh;
+    }
     @include breakpoint-up(large) {
         display: grid;
-        grid-template-columns: 1fr 5fr;
+        grid-template-columns: 1fr 2fr;
+        min-height: 100vh;   
     }
     
 }

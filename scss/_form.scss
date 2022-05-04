@@ -1,27 +1,33 @@
 @use './config' as *;
 @use './globals' as *;
 .form-part {
+
+    &__header {
+
+        min-width: 21.375rem;
+        // @include breakpoint-down(medium) {
+        //     max-width: rem(329);
+        // }
+        @include breakpoint-up(large) {
+            max-width: 38.375rem;
+        }
+    }
     @include breakpoint-down(medium) {
        
     }
     @include breakpoint-up(large) {
-    width: 100vw;
+    width: 80vw;
+    min-height: 100vh;
 
-    &__header {
-
-        @include breakpoint-down(medium) {
-            max-width: rem(329);
-        }
-        @include breakpoint-up(large) {
-        max-width: rem(538);
-        }
-    }
     }
     
 }
 
 form {
     // margin-left: rem(28);
+    @include breakpoint-up(large) {
+        width: 100%;
+    }
     h1 {
         padding: rem(17);
 
@@ -41,8 +47,8 @@ form {
             row-gap: rem(16);
         }
         @include breakpoint-up(large) {
-            grid-template-columns: 1fr 1fr;
-            max-width: rem(100);
+            width: 100%;
+            grid-template-columns: 30% 30%;
             column-gap: rem(25);
             row-gap: rem(15);
 
@@ -50,23 +56,21 @@ form {
         label {
            font-size: rem(11);
            align-self: end; 
-           margin-left: calc(5rem + 2vw);
+           margin: 0 auto;
            font-weight: 500;
-            @include breakpoint-down(medium) {
-                max-width: rem(135);
-            }
+           max-width: rem(157);
            @include breakpoint-up(large) {
                 margin-right: rem(-75);
            }
         }
         input {
-            max-width: rem(314);
+            max-width: rem(189);
             margin: 0 auto;
-            width: rem(343);
+           
             border: none;
             border-radius: 5px;
             @include breakpoint-down(medium) {
-                max-width: rem(221);
+                
             }
             @include breakpoint-up(large) {
                
@@ -76,27 +80,26 @@ form {
 
     .button {
         
-        left: 57%;
+        left: 50%;
         transform: translateX(-50%);
         margin-bottom: rem(38);
 
         @include breakpoint-up(large) {
-            left: 33%;
+            left: 50%;
         }
 
     }
 
     .content {
         background-color: $formColor;
-        width: rem(481);
+       
         @include breakpoint-down(medium) {
-            max-width: 100%;
+           
         }
         @include breakpoint-up(large) {
             background-color: $formColor;
-            width: 44.0625rem;
             margin-right: auto;
-            width: 100vw;
+            width: 100%;
         }
     }
 }
@@ -106,6 +109,8 @@ form {
     max-width: rem(261);
 
     @include breakpoint-up(large) {
-        max-width: 46.3125rem;
+       text-align: center;
+       width:inherit;
+       max-width: initial;
     }
 }
