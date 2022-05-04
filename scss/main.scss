@@ -4,6 +4,7 @@
 @use './form' as *;
 
 .wrapper {
+    background-color: #fff;
     @include breakpoint-down(medium) {
     height: 100vh;
     }

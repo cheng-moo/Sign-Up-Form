@@ -92,6 +92,7 @@ form {
         left: 50%;
         transform: translateX(-50%);
         margin-bottom: rem(38);
+        color: #fff;
 
         @include breakpoint-up(large) {
             left: 50%;
