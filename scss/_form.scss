@@ -44,15 +44,11 @@ form {
         padding-right: rem(29);
         margin-bottom: rem(33);
         padding-bottom: rem(37);
-        @include breakpoint-down(medium) {
-            row-gap: rem(16);
-        }
+        row-gap: rem(20)
         @include breakpoint-up(large) {
             width: 100%;
             grid-template-columns: 30% 30%;
             column-gap: rem(25);
-            row-gap: rem(15);
-
         }
         label {
            font-size: rem(11);
