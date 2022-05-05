@@ -59,8 +59,10 @@ password.addEventListener('input', (e) => {
 conPassword.addEventListener('input', (e) => {
     if (password.value !== conPassword.value) {
         checkMatch.textContent='Password Doesn\'t Match';
+        conPassword.classList.add('error');
     } else {
         checkMatch.textContent='';
+        conPassword.classList.remove('error');
     }
 });
 form.addEventListener('submit', (e) => {
